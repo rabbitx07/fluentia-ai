@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fluentia</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>🌸 Fluentia </h2>
+
+    <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#languages">Languages</a>
+        <a href="#about">About</a>
+    </div>
+
+    <button class="nav-btn" onclick="document.getElementById('languages').scrollIntoView({behavior:'smooth'})">
+    Try Now
+</button>
+</div>
+</header>
+
+<!-- MAIN -->
+<div class="hero">
+<div class="main">
+
+    <!-- LEFT -->
+    <div class="left" id="features">
+        <span class="badge">AI POWERED</span>
+
+        <h1>Translate anything, instantly.</h1>
+
+        <p>
+            Smart AI translation across languages.
+            Fast, accurate and effortless.
+        </p>
+
+        <button class="cta-btn">START TRANSLATING</button>
+
+        <div class="features">
+    <div>
+        <i class="fa-solid fa-globe"></i>
+        <p>Multiple Languages</p>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-bolt"></i>
+        <p>Instant Results</p>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-shield-halved"></i>
+        <p>AI Powered</p>
+    </div>
+</div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="container" id="languages">
+        <h2>🌸 AI Language Translator</h2>
+        <p class="subtitle">translating thoughts, not just words ✨</p>
+
+        <textarea id="text" placeholder="Type something..."></textarea>
+
+        <div class="controls">
+            <select id="language">
+                <option value="fr">🇫🇷 French</option>
+                <option value="es">🇪🇸 Spanish</option>
+                <option value="hi">🇮🇳 Hindi</option>
+                <option value="de">🇩🇪 German</option>
+                <option value="ja">🇯🇵 Japanese</option>
+            </select>
+
+            <button onclick="translateText()">
+                <i class="fa-solid fa-language"></i>
+            </button>
+
+            <button onclick="swapLang()">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+
+            <button onclick="startListening()">
+                <i class="fa-solid fa-microphone"></i>
+            </button>
+        </div>
+
+        <div class="output">
+            <h3>Translation</h3>
+            <p id="result"></p>
+
+            <button onclick="copyText()">
+                <i class="fa-solid fa-copy"></i> Copy
+            </button>
+
+            <button onclick="speakText()">
+                <i class="fa-solid fa-volume-high"></i> Speak
+            </button>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<section class="about" id="about">
+    <h2>About Fluentia</h2>
+    <p class="about-text">
+        Fluentia is a smart multilingual translator powered by AI.
+        It helps you translate, speak, and understand languages instantly.
+    </p>
+
+    <p class="about-sub">
+        Built for simplicity, speed, and real-world use.
+    </p>
+</section>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+<footer class="footer">
+    <p>© 2026 Fluentia • Built with 💜 by anshika </p>
+</footer>
+</html>
