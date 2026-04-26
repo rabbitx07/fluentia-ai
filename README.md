@@ -7,7 +7,7 @@ It enables real-time translation across multiple languages with a clean, modern,
 
 ## ✨ Features
 
-* 🌍 Multilingual translation (100+ languages using M2M100)
+* 🌍 Multilingual translation (Using M2M100)
 * 🗣️ Text-to-Speech (Speak translated output)
 * 🎤 Voice input (Speech recognition)
 * 🔁 Language swap functionality
